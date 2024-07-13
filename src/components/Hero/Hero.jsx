@@ -70,35 +70,6 @@ const Hero = ({ title }) => {
             Generate via Prompt
           </motion.button>
         </div>
-        <div className="carousel-container">
-          <motion.div
-            className="carousel"
-            initial="hidden"
-            animate="visible"
-            variants={swipeVariants}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
-          >
-            <motion.div className="carousel-item">
-              <img src="src\assets\image (4).png" alt="Slide 1" />
-            </motion.div>
-            <motion.div className="carousel-item">
-              <img src="src\assets\sanemi.jpg" alt="Slide 2" />
-            </motion.div>
-            <motion.div className="carousel-item">
-              <img src="src/assets/satan.jpg" alt="Slide 3" />
-            </motion.div>
-            <motion.div className="carousel-item">
-              <img src="src/assets/satan.jpg" alt="Slide 3" />
-            </motion.div>
-            <motion.div className="carousel-item">
-              <img src="src/assets/satan.jpg" alt="Slide 3" />
-            </motion.div>
-            <motion.div className="carousel-item">
-              <img src="src/assets/satan.jpg" alt="Slide 3" />
-            </motion.div>
-            {/* Add more slides as needed */}
-          </motion.div>
-        </div>
       </div>
       <div className="app">
         <img src={iPhone} alt="iPhone" />
