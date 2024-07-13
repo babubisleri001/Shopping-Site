@@ -1,0 +1,12 @@
+.footer{
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    font-size: smaller;
+    height: 3rem;
+    background-image: url(/src/assets/nav-bg.png);
+    color: white;
+    justify-content: center;
+    align-items: center;
+}

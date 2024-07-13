@@ -1,0 +1,172 @@
+$margin-side: 6vw;
+$margin-top: 10vh;
+$highlight-color: #f9a826;
+
+.wrapper {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: $margin-top $margin-side;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      max-height: auto;
+    }
+
+    .desc-container {
+      overflow: hidden;
+      white-space: nowrap;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .desc-line {
+      font-family: monospace;
+      color: rgb(208, 208, 208);
+      font-size: x-large;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      visibility: visible;
+      line-height: 1.2;
+    }
+
+    .button-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+
+      .waitlist-button,
+      .generate-button {
+        padding: 12px 24px;
+        font-size: 1.5vw;
+        font-family: monospace;
+        color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            background: $highlight-color;
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(255, 152, 92, 0.9);
+            backdrop-filter: blur(13px);
+            transform: scale(1.05);
+        }
+
+        &:active {
+          transform: scale(1);
+        }
+      }
+
+      .waitlist-button {
+        background-color: #000000;
+      }
+
+      .generate-button {
+        background-color: #000000;
+      }
+    }
+
+    .carousel-container {
+      margin-top: 140px; // Increased margin from 20px to 40px
+      display: flex;
+      align-items: center;
+
+      .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 20px;
+        width: 80vw; // Adjust width as needed
+        margin-top: 80px;
+
+        .carousel-item {
+          flex: none;
+          width: 300px; // Adjust size as needed
+          scroll-snap-align: start;
+
+          img {
+            width: 100%;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .app {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+
+    img {
+      max-width: 100%;
+      max-height: auto;
+      border-radius: 4.5vh;
+    }
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    .title {
+      .desc-container {
+        .desc-line {
+          font-size: larger;
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 1000px) {
+  .wrapper {
+    .title {
+      margin-top: 5rem;
+    }
+  }
+}
