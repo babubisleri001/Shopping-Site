@@ -127,29 +127,30 @@ img {
 @media (max-width: 576px) {
   .heading {
     font-size: 2rem;
-    margin-top: 4rem;
+    margin-top: 2rem;  /* Adjusted margin */
   }
 
   .subHeading {
     font-size: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;  /* Adjusted margin */
   }
 
   .scrollingContainer {
     padding: 0 0.5rem;
 
     .element {
-      height: 150vh;
+      height: auto;  /* Adjusted height */
       min-width: 100px;
-      margin: 4rem 1rem;
+      margin: 2rem 1rem;  /* Adjusted margin */
 
       .imageHeading {
         font-size: 1rem;
-        margin-top: 4rem;
+        margin-top: 2rem;  /* Adjusted margin */
       }
 
       img {
         height: auto;
+        width: auto;  /* Adjusted size */
       }
     }
   }

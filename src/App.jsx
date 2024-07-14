@@ -7,7 +7,7 @@ import Team from './components/Team/Team';
 import Features from './components/Features/Features';
 import title from './assets/Rookus-title-4.png';
 import kafka from './assets/kafka.jpg';
-import ImageGen from './components/ImageGen/ImageGen'
+import ImageGen from './components/ImageGen/ImageGen';
 
 const teamMembers = [
   {
