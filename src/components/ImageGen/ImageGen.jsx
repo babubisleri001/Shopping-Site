@@ -19,7 +19,7 @@ const ImageGen = () => {
     const startTime = performance.now();
 
     try {
-      const app = await client("gaur3009/Modelgen1");
+      const app = await client("gaur3009/Rookus_Mockup");
       const result = await app.predict("/infer", [
         "a single", // Prompt Part 1 (hidden)
         color, // color
