@@ -69,7 +69,8 @@ const ImageGen = () => {
   return (
     <div className="image-gen-container">
       <div className="form-area">
-        <h1>T-shirt Mockup Generator (wait time ~3 minutes)</h1>
+        <h1 style={{textAlign:"center"}}>T-shirt Mockup Generator<br/><code> ~est: 3 mins</code></h1>
+        
         <div className="form-group">
           <label>Color</label>
           <input
