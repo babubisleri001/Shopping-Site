@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ImageGen.scss';
 import { client } from "@gradio/client";
 
@@ -10,13 +10,28 @@ const ImageGen = () => {
   const [loading, setLoading] = useState(false);
   const [timeTaken, setTimeTaken] = useState(null);
   const [error, setError] = useState(null);
+  const [startTime, setStartTime] = useState(null);
+  const [currentTime, setCurrentTime] = useState(0);
+
+  useEffect(() => {
+    let timer;
+    if (loading) {
+      timer = setInterval(() => {
+        setCurrentTime((prev) => prev + 1);
+      }, 1000);
+    } else {
+      clearInterval(timer);
+    }
+    return () => clearInterval(timer);
+  }, [loading]);
 
   const generateMockup = async () => {
     setLoading(true);
     setMockup(null);
     setTimeTaken(null);
     setError(null);
-    const startTime = performance.now();
+    setStartTime(performance.now());
+    setCurrentTime(0);
 
     try {
       const app = await client("gaur3009/Modelgen1");
@@ -54,7 +69,7 @@ const ImageGen = () => {
   return (
     <div className="image-gen-container">
       <div className="form-area">
-        <h1>T-shirt Mockup Generator(wait time 2minute)</h1>
+        <h1>T-shirt Mockup Generator (wait time ~3 minutes)</h1>
         <div className="form-group">
           <label>Color</label>
           <input
@@ -88,7 +103,7 @@ const ImageGen = () => {
         {loading && (
           <div className="loader-container">
             <div className="loader"></div>
-            <p>Generating mockup...</p>
+            <p>Generating mockup... Elapsed time: {currentTime} seconds</p>
           </div>
         )}
         {mockup && (
