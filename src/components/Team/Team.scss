@@ -27,6 +27,7 @@
     margin-bottom: 40px;
 
     p {
+      text-align: justify;
       font-size: 1.1em;
       line-height: 1.6;
       margin-bottom: 15px;
@@ -77,6 +78,7 @@
       }
 
       .member-description {
+        text-align: justify;
         font-size: 1em;
         line-height: 1.5;
         margin: 0;
@@ -113,6 +115,7 @@
     }
 
     .about p {
+      margin: 0 2rem;
       font-size: 1em;
     }
 
@@ -140,6 +143,8 @@
         }
 
         .member-description {
+          max-width: 70vw;
+          
           font-size: 0.9em;
         }
 
