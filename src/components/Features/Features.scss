@@ -75,17 +75,18 @@ img {
 
   .subHeading {
     font-size: 1.5rem;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
   }
 
   .scrollingContainer {
     .element {
-      height: 300vh;
+      height: auto;
       min-width: 200px;
-      margin: 8rem 2.5rem;
+      margin: 4rem 2.5rem;
 
       .imageHeading {
         font-size: 1.5rem;
+        margin-top: 4rem;
       }
     }
   }
@@ -95,25 +96,25 @@ img {
 @media (max-width: 768px) {
   .heading {
     font-size: 2.5rem;
-    margin-top: 6rem;
+    margin-top: 4rem;
   }
 
   .subHeading {
     font-size: 1.25rem;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
 
   .scrollingContainer {
     padding: 0 1rem;
 
     .element {
-      height: 200vh;
+      height: auto;
       min-width: 150px;
-      margin: 6rem 1.5rem;
+      margin: 4rem 1.5rem;
 
       .imageHeading {
         font-size: 1.25rem;
-        margin-top: 6rem;
+        margin-top: 3rem;
       }
 
       img {
@@ -127,30 +128,29 @@ img {
 @media (max-width: 576px) {
   .heading {
     font-size: 2rem;
-    margin-top: 2rem;  /* Adjusted margin */
+    margin-top: 2rem;
   }
 
   .subHeading {
     font-size: 1rem;
-    margin-bottom: 2rem;  /* Adjusted margin */
+    margin-bottom: 2rem;
   }
 
   .scrollingContainer {
     padding: 0 0.5rem;
 
     .element {
-      height: auto;  /* Adjusted height */
+      height: auto;
       min-width: 100px;
-      margin: 2rem 1rem;  /* Adjusted margin */
+      margin: 2rem 1rem;
 
       .imageHeading {
         font-size: 1rem;
-        margin-top: 2rem;  /* Adjusted margin */
+        margin-top: 2rem;
       }
 
       img {
         height: auto;
-        width: auto;  /* Adjusted size */
       }
     }
   }
