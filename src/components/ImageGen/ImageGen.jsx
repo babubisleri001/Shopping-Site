@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './ImageGen.scss';
 import { client } from "@gradio/client";
 
@@ -9,40 +9,30 @@ const ImageGen = () => {
   const [design, setDesign] = useState("yellow stripes");
   const [loading, setLoading] = useState(false);
   const [timeTaken, setTimeTaken] = useState(null);
-  const [elapsedTime, setElapsedTime] = useState(0);
   const [error, setError] = useState(null);
-
-  useEffect(() => {
-    let timer;
-    if (loading) {
-      timer = setInterval(() => {
-        setElapsedTime((prev) => prev + 1);
-      }, 1000);
-    } else {
-      clearInterval(timer);
-    }
-    return () => clearInterval(timer);
-  }, [loading]);
 
   const generateMockup = async () => {
     setLoading(true);
     setMockup(null);
     setTimeTaken(null);
     setError(null);
-    setElapsedTime(0);
     const startTime = performance.now();
 
     try {
-      const app = await client("gaur3009/Rookus_mockup");
+      const app = await client("gaur3009/Modelgen1");
       const result = await app.predict("/infer", [
-        `A ${color} ${dressType} with ${design}`, // Prompt Part 1
-        "", // Prompt Part 5 (hidden)
-        0, // Seed
-        true, // Randomize seed
-        512, // Width
-        512, // Height
-        0.0, // Guidance scale
-        2, // Number of inference steps
+        "a single", // Prompt Part 1 (hidden)
+        color, // color
+        dressType, // dress_type
+        design, // design
+        "hanging on the plain grey wall", // Prompt Part 5 (hidden)
+        "", // negative_prompt (hidden)
+        0, // seed
+        true, // randomize_seed
+        512, // width
+        512, // height
+        0.0, // guidance_scale
+        2, // num_inference_steps
       ]);
 
       if (result && result.data && result.data[0]) {
@@ -64,7 +54,7 @@ const ImageGen = () => {
   return (
     <div className="image-gen-container">
       <div className="form-area">
-        <h1>T-shirt Mockup Generator (wait time ~1 minute)</h1>
+        <h1>T-shirt Mockup Generator(wait time 1minute)</h1>
         <div className="form-group">
           <label>Color</label>
           <input
@@ -98,13 +88,13 @@ const ImageGen = () => {
         {loading && (
           <div className="loader-container">
             <div className="loader"></div>
-            <p>Generating mockup... Elapsed time: {elapsedTime} seconds</p>
+            <p>Generating mockup...</p>
           </div>
         )}
         {mockup && (
           <div className="mockup-result">
             <h2>Mockup Result</h2>
-            <img src={`data:image/png;base64,${mockup}`} alt="T-shirt Mockup" />
+            <img src={`${mockup.url}`} alt="T-shirt Mockup" />
           </div>
         )}
         {!loading && !mockup && (
