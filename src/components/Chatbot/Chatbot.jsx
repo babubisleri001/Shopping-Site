@@ -50,7 +50,7 @@ const Chatbot = () => {
                 <div className="chatbot-interface">
                     <div className="chatbot-header">
                         <h1>Chatbot</h1>
-                        <button className="close-button" onClick={toggleChatbot}>✖</button>
+                        <button className="close-chatbot-button" onClick={toggleChatbot}>✖</button>
                     </div>
                     <div className="chatbot-input-container">
                         <input
