@@ -18,10 +18,13 @@ $font-size-small: 0.875rem;
   gap: 2rem;
   font-family: 'Courier New', Courier, monospace;
 
-  .contact-info {
+  .contact-info,
+  .contact-form {
     flex: 1;
     min-width: 18.75rem;
+  }
 
+  .contact-info {
     h2 {
       font-size: $font-size-medium;
       color: $secondary-color;
@@ -59,9 +62,6 @@ $font-size-small: 0.875rem;
   }
 
   .contact-form {
-    flex: 1;
-    min-width: 18.75rem;
-
     form {
       display: flex;
       flex-direction: column;
@@ -86,7 +86,7 @@ $font-size-small: 0.875rem;
 
         textarea {
           resize: vertical;
-          height: 9rem; 
+          height: 9rem;
         }
       }
 
@@ -108,33 +108,154 @@ $font-size-small: 0.875rem;
     }
   }
 }
- .social-media-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
 
-    a {
-      display: inline-block;
-      padding: 10px 20px;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+.social-media-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
 
-      &:hover {
-        transform: scale(1.05);
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .whatsapp-button {
+    background-color: #25D366; // WhatsApp green
+  }
+
+  .instagram-button {
+    background-color: #E1306C; // Instagram gradient color
+  }
+
+  .linkedin-button {
+    background-color: #0077B5; // LinkedIn blue
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    margin-top: 20vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 1rem;
+    flex-direction: column;
+
+    .contact-info,
+    .contact-form {
+      min-width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info {
+      h1 {
+        font-size: $font-size-medium;
+      }
+
+      p {
+        font-size: $font-size-small;
+      }
+
+      .contact-details {
+        .contact-detail {
+          font-size: $font-size-small;
+        }
       }
     }
 
-    .whatsapp-button {
-      background-color: #25D366; // WhatsApp green
-    }
+    .contact-form {
+      form {
+        label {
+          font-size: $font-size-small;
 
-    .instagram-button {
-      background-color: #E1306C; // Instagram gradient color
-    }
+          input,
+          textarea {
+            font-size: $font-size-small;
+          }
+        }
 
-    .linkedin-button {
-      background-color: #0077B5; // LinkedIn blue
+        button {
+          font-size: $font-size-small;
+          padding: 0.5rem 1rem;
+        }
+      }
     }
   }
+
+  .social-media-buttons {
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      padding: 8px 16px;
+      font-size: $font-size-small;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-container {
+    margin-top: 15vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding: 0.5rem;
+
+    .contact-info,
+    .contact-form {
+      min-width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info {
+      h1 {
+        font-size: $font-size-small;
+      }
+
+      p {
+        font-size: $font-size-small;
+      }
+
+      .contact-details {
+        .contact-detail {
+          font-size: $font-size-small;
+        }
+      }
+    }
+
+    .contact-form {
+      form {
+        label {
+          font-size: $font-size-small;
+
+          input,
+          textarea {
+            font-size: $font-size-small;
+          }
+        }
+
+        button {
+          font-size: $font-size-small;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+  }
+
+  .social-media-buttons {
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      padding: 6px 12px;
+      font-size: $font-size-small;
+    }
+  }
+}
