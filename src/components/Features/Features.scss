@@ -1,157 +1,107 @@
-.heading {
-  margin-top: 8rem;
-  display: flex;
-  justify-content: center;
-  color: #f8f8f8;
-  font-size: 5rem;
-  font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+.wrapper{
+  margin-top: 10rem;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+
+    .heading {
+      text-align: center;
+      color: #f8f8f8;
+      font-size: 5rem;
+      font-weight: 600;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    
+    .subHeading {
+      display: flex;
+      justify-content: center;
+      color: #b0b0b0;
+      font-size: 2.5rem;
+      font-weight: 400;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .features-container {
+    
+    
+    .row {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 5rem;
+
+      .element {
+        margin-top: 3rem;
+        padding: 3rem;
+        height: 850px;
+        min-width: 450px;
+        background-color: #000000;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        
+      
+    
+        .imageHeading {
+          margin-bottom: 2rem;
+          color: #f8f8f8;
+          text-align: center;
+          font-size: 2rem;
+          font-weight: 500;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        
+        img {
+          height: 100%;
+          width: 100%;
+
+          &:hover {
+            scale: 1.05;
+          }
+        }
+      }
+
+      .square {
+        margin-top: 3rem;
+        padding: 3rem;
+        height: auto;
+        min-width: 450px;
+        background-color: #000000;
+        transition: transform 0.3s, box-shadow 0.3s;
+      
+    
+        .imageHeading {
+          margin-bottom: 2rem;
+          color: #f8f8f8;
+          text-align: center;
+          font-size: 2rem;
+          font-weight: 500;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        
+        img {
+          height: 100%;
+          width: 100%;
+
+          &:hover {
+            scale: 1.05;
+          }
+        }
+      }
+    }
+
+
+  }
 }
 
-.subHeading {
-  display: flex;
-  justify-content: center;
-  color: #b0b0b0;
-  font-size: 2.5rem;
-  font-weight: 400;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  margin-bottom: 4rem;
-}
 
-.scrollingContainer {
-  display: flex;
-  align-items: center;
-  background-color: #000000;
-  overflow-x: auto;
-  overflow-y: hidden;
-  height: 120vh;
-  padding-right: 50vw;
-  scroll-behavior: smooth;
-  padding: 0 2rem;
-}
 
-.element {
-  height: 100%;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 8rem 5rem;
-  background-color: #000000;
-  border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  overflow: hidden;
-}
 
-.element:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
 
-.imageHeading {
-  color: #f8f8f8;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  margin-top: 8rem;
-  font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
 
-img {
-  height: 100%;
-  width: 100%;
-  border-radius: 20px;
-  object-fit: fill;
-  margin-bottom: 2rem;
-}
 
 /* Medium devices (tablets, 768px and up) */
-@media (max-width: 1200px) {
-  .heading {
-    font-size: 3rem;
-  }
-
-  .subHeading {
-    font-size: 1.5rem;
-    margin-bottom: 4rem;
-  }
-
-  .scrollingContainer {
-    .element {
-      height: auto;
-      min-width: 200px;
-      margin: 4rem 2.5rem;
-
-      .imageHeading {
-        font-size: 1.5rem;
-        margin-top: 4rem;
-      }
-    }
-  }
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 768px) {
-  .heading {
-    font-size: 2.5rem;
-    margin-top: 4rem;
-  }
-
-  .subHeading {
-    font-size: 1.25rem;
-    margin-bottom: 3rem;
-  }
-
-  .scrollingContainer {
-    padding: 0 1rem;
-
-    .element {
-      height: auto;
-      min-width: 150px;
-      margin: 4rem 1.5rem;
-
-      .imageHeading {
-        font-size: 1.25rem;
-        margin-top: 3rem;
-      }
-
-      img {
-        height: auto;
-      }
-    }
-  }
-}
-
-/* Extra small devices (phones, less than 576px) */
-@media (max-width: 576px) {
-  .heading {
-    font-size: 2rem;
-    margin-top: 2rem;
-  }
-
-  .subHeading {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .scrollingContainer {
-    padding: 0 0.5rem;
-
-    .element {
-      height: auto;
-      min-width: 100px;
-      margin: 2rem 1rem;
-
-      .imageHeading {
-        font-size: 1rem;
-        margin-top: 2rem;
-      }
-
-      img {
-        height: auto;
-      }
-    }
-  }
-}
