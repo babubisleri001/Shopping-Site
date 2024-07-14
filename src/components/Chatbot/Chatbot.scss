@@ -46,11 +46,18 @@ $base-font-size: 16px;
       justify-content: space-between;
       align-items: center;
 
-      .close-button {
+      .close-chatbot-button {
         color: black;
         border: none;
         font-size: 1.25rem; // 20px
         cursor: pointer;
+        padding: 0px;
+        margin-left: 105px;
+        background-color: white;
+
+        &:hover{
+          background-color: $primary-color;
+        }
       }
     }
 
