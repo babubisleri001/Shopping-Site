@@ -105,3 +105,15 @@
 
 
 /* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px){
+  .wrapper {
+    .title{
+      .heading{
+        font-size: 3rem;
+      }
+      .subHeading{
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
