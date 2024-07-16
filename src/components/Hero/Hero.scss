@@ -67,6 +67,11 @@ $highlight-color: #f9a826;
         &:active {
           transform: scale(1);
         }
+
+        a{
+          text-decoration: none;
+          color: white;
+        }
       }
 
       .waitlist-button {

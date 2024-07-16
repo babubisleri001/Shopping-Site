@@ -4,6 +4,7 @@ import iPhone from '../../assets/DEMO-removebg.png';
 import { useState } from 'react';
 import Waitlist from '../Waitlist/Waitlist'; // Ensure correct import path
 import ImageGen from '../ImageGen/ImageGen'; // Ensure correct import path
+import { Link } from 'react-router-dom'
 
 const Hero = ({ title }) => {
   const [showWaitlist, setShowWaitlist] = useState(false);
@@ -65,9 +66,8 @@ const Hero = ({ title }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, ease: 'easeInOut', delay: 6.5 }}
-            onClick={handleImageGenClick}
           >
-            Generate via Prompt
+            <Link to='/design'>Generate via Prompt</Link>
           </motion.button>
         </div>
       </div>

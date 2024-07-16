@@ -9,8 +9,8 @@ import title from './assets/Rookus-title-4.png';
 import kafka from './assets/kafka.jpg';
 
 
-import Test from './components/Test/Test';
-
+import DesignGen from './components/DesignGen/DesignGen';
+import Test from './components/Test/Test'
 const teamMembers = [
   {
     image: kafka,
@@ -31,7 +31,10 @@ const ContactUs = () => <Contact />;
 
 const FeaturesPage = () => <Features />;
 
+const Design = () => <DesignGen />
+
 const Testing = () => <Test/>
+
 
 function App() {
   const router = createBrowserRouter([
@@ -59,7 +62,10 @@ function App() {
           element: <FeaturesPage />,
         },
 
-
+        {
+          path: '/design',
+          element: <Design />
+        },
 
 
         {
