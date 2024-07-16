@@ -7,7 +7,9 @@ import Team from './components/Team/Team';
 import Features from './components/Features/Features';
 import title from './assets/Rookus-title-4.png';
 import kafka from './assets/kafka.jpg';
-import ImageGen from './components/ImageGen/ImageGen';
+
+
+import Test from './components/Test/Test';
 
 const teamMembers = [
   {
@@ -28,6 +30,8 @@ const Home = () => <Hero title={title} />;
 const ContactUs = () => <Contact />;
 
 const FeaturesPage = () => <Features />;
+
+const Testing = () => <Test/>
 
 function App() {
   const router = createBrowserRouter([
@@ -54,6 +58,14 @@ function App() {
           path: '/features',
           element: <FeaturesPage />,
         },
+
+
+
+
+        {
+          path: '/test-branch',
+          element: <Testing/>
+        }
       ],
     },
   ]);
