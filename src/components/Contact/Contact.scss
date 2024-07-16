@@ -7,9 +7,7 @@ $font-size-medium: 1.125rem;
 $font-size-small: 0.875rem;
 
 .contact-container {
-  margin-top: 30vh;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  margin: 25vh 10vw;
   display: flex;
   flex-wrap: wrap;
   background-color: #000;
@@ -21,10 +19,18 @@ $font-size-small: 0.875rem;
   .contact-info,
   .contact-form {
     flex: 1;
-    min-width: 18.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .title{
+      font-size: 5rem;
+    }
+
   }
 
   .contact-info {
+    margin-right: 3rem;
     h2 {
       font-size: $font-size-medium;
       color: $secondary-color;
@@ -63,11 +69,19 @@ $font-size-small: 0.875rem;
 
   .contact-form {
     form {
+      border: solid 1px white;
+      border-radius: 10px;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
 
       label {
+            --border-height: 1px;
+            --border-before-color: rgba(221, 221, 221, 0.39);
+            --border-after-color: #f9a826;
+            --input-hovered-color: #f9a82608;
+            position: relative;
         display: flex;
         flex-direction: column;
         font-size: $font-size-medium;
@@ -75,14 +89,35 @@ $font-size-small: 0.875rem;
 
         input,
         textarea {
-          margin-top: 0.5rem;
-          padding: 0.5rem;
-          font-size: $font-size-medium;
-          color: $text-color;
-          background-color: $secondary-color;
-          border: 1px solid $border-color;
-          border-radius: 0.25rem;
-        }
+          color: #fff;
+          font-size: 0.9rem;
+          background-color: transparent;
+          width: 100%;
+          box-sizing: border-box;
+          padding-inline: 0.5em;
+          padding-block: 0.7em;
+          border: none;
+          border-bottom: var(--border-height) solid var(--border-before-color);
+
+          &:hover {
+            background: var(--input-hovered-color);
+           }
+          &:focus {
+            outline: none;
+           }
+          &:focus ~ .input-border {
+            width: 100%;
+           }
+         }
+         .input-border {
+          position: absolute;
+          background: var(--border-after-color);
+          width: 0%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          transition: 0.3s;
+         }
 
         textarea {
           resize: vertical;
@@ -91,7 +126,7 @@ $font-size-small: 0.875rem;
       }
 
       button {
-        align-self: flex-start;
+        align-self: center;
         padding: 0.75rem 1.5rem;
         font-size: $font-size-medium;
         color: $secondary-color;
@@ -100,6 +135,9 @@ $font-size-small: 0.875rem;
         border-radius: 0.25rem;
         cursor: pointer;
         text-transform: uppercase;
+        margin-top: 4rem;
+        width: fit-content;
+
 
         &:hover {
           background-color: darken($primary-color, 10%);
@@ -111,6 +149,7 @@ $font-size-small: 0.875rem;
 
 .social-media-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 20px;
 
@@ -128,134 +167,54 @@ $font-size-small: 0.875rem;
   }
 
   .whatsapp-button {
-    background-color: #25D366; // WhatsApp green
+    border: #25D366 solid 1px; // WhatsApp green
   }
 
   .instagram-button {
-    background-color: #E1306C; // Instagram gradient color
+    border: #E1306C solid 1px; // Instagram gradient color
   }
 
   .linkedin-button {
-    background-color: #0077B5; // LinkedIn blue
+    border: #0077B5 solid 1px; // LinkedIn blue
   }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .contact-container {
-    margin-top: 20vh;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    padding: 1rem;
+@media (max-width: 1200px) {
+  .contact-container{
     flex-direction: column;
-
-    .contact-info,
-    .contact-form {
-      min-width: 100%;
-      margin-bottom: 1rem;
-    }
+    margin-top: 10rem;
 
     .contact-info {
-      h1 {
-        font-size: $font-size-medium;
-      }
-
-      p {
-        font-size: $font-size-small;
-      }
-
-      .contact-details {
-        .contact-detail {
-          font-size: $font-size-small;
-        }
-      }
-    }
-
-    .contact-form {
-      form {
-        label {
-          font-size: $font-size-small;
-
-          input,
-          textarea {
-            font-size: $font-size-small;
-          }
-        }
-
-        button {
-          font-size: $font-size-small;
-          padding: 0.5rem 1rem;
-        }
-      }
-    }
-  }
-
-  .social-media-buttons {
-    flex-direction: column;
-    align-items: center;
-
-    a {
-      padding: 8px 16px;
-      font-size: $font-size-small;
+      margin-right: 0;
     }
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 880px) {
   .contact-container {
-    margin-top: 15vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    padding: 0.5rem;
-
-    .contact-info,
-    .contact-form {
-      min-width: 100%;
-      margin-bottom: 0.5rem;
-    }
-
     .contact-info {
-      h1 {
-        font-size: $font-size-small;
+      .title {
+        font-size: 3rem;
       }
-
-      p {
-        font-size: $font-size-small;
-      }
-
-      .contact-details {
-        .contact-detail {
-          font-size: $font-size-small;
-        }
-      }
-    }
-
-    .contact-form {
-      form {
-        label {
-          font-size: $font-size-small;
-
-          input,
-          textarea {
-            font-size: $font-size-small;
-          }
-        }
-
-        button {
-          font-size: $font-size-small;
-          padding: 0.5rem 1rem;
-        }
-      }
-    }
-  }
-
-  .social-media-buttons {
-    flex-direction: column;
-    align-items: center;
-
-    a {
-      padding: 6px 12px;
-      font-size: $font-size-small;
     }
   }
 }
+
+@media (max-width: 576px){
+  .contact-container{
+    .contact-info{
+      .title {
+        font-size: 3rem;
+      }
+    }
+  }
+  .social-media-buttons{
+    justify-content: center;
+    min-width: 100%;
+    text-align: center;
+    a{
+      width: 100%;
+    }
+  }
+}
+

@@ -22,7 +22,6 @@ const Contact = () => {
 
     emailjs.send('service_ab0ncrk', 'template_wrhighr', form, 'user_token')
       .then((result) => {
-        console.log(result.text);
         alert('Message sent successfully!');
         setForm({
           from_name: '',
@@ -39,7 +38,7 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-info">
-        <h2>Get in Touch</h2>
+        <div className='title'>Get in Touch</div>
         <h1>Convey Your Ideas to Us</h1>
         <p>
           Contact us for questions,hiring , technical assistance, or collaboration
@@ -64,23 +63,23 @@ const Contact = () => {
             rel="noopener noreferrer"
             className="whatsapp-button"
           >
-            Message on WhatsApp
+           WhatsApp
           </a>
           <a
-            href="https://www.instagram.com/your-instagram-username"
+            href="https://www.instagram.com/rookus.in"
             target="_blank"
             rel="noopener noreferrer"
             className="instagram-button"
           >
-            Open Instagram
+            Instagram
           </a>
           <a
-            href="https://www.linkedin.com/in/your-linkedin-username"
+            href="https://www.linkedin.com/company/rookus-in/"
             target="_blank"
             rel="noopener noreferrer"
             className="linkedin-button"
           >
-            Open LinkedIn
+            LinkedIn
           </a>
         </div>
       </div>
@@ -95,6 +94,7 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
+            <span className="input-border"></span>
           </label>
           <label>
             Email
@@ -105,6 +105,7 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
+            <span className="input-border"></span>
           </label>
           <label>
             Phone Number
@@ -114,6 +115,7 @@ const Contact = () => {
               value={form.phoneNumber}
               onChange={handleChange}
             />
+            <span className="input-border"></span>
           </label>
           <label>
             Message
@@ -124,8 +126,9 @@ const Contact = () => {
               required
               rows="6"
             />
+            <span className="input-border"></span>
           </label>
-          <button type="submit">Submit Now</button>
+          <button type="submit">Send</button>
         </form>
       </div>
     </div>
