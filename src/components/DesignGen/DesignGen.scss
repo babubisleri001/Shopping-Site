@@ -1,6 +1,6 @@
 $big-dimension: 50vw;
 $medium-dimension: 30vw;
-$small-dimension: 300px;
+$small-dimension: 500px;
 $highlight-color: #f9a826;
 
 .wrapper {
@@ -116,6 +116,14 @@ $highlight-color: #f9a826;
         .heading{
             font-size: 3rem;
             text-align: center;
+        }
+        .container{
+          .image-container{
+            .image-preview{
+              min-width: 300px;
+              height: 300px;
+            }
+          }
         }
     }
 }

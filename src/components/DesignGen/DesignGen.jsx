@@ -88,15 +88,15 @@ const DesignGen = () => {
                 <span className="input-border"></span>
             </div>
             <div className="form">
-                <input className="input" placeholder="Front Design" type="text" 
+                <input className="input" placeholder="Design" type="text" 
                 onChange={(e) => setFrontDesign(e.target.value)}/>
                 <span className="input-border"></span>
             </div>
-            <div className="form">
+            {/* <div className="form">
                 <input className="input" placeholder="Back Design" type="text" 
                 onChange={(e) => setBackDesign(e.target.value)}/>
                 <span className="input-border"></span>
-            </div>
+            </div> */}
             {!loading && (
                 <button className='active-run-button' onClick={generateMockup}>Run</button>
             )}
@@ -116,7 +116,7 @@ const DesignGen = () => {
                     <span>loading...</span>
                 )}
         </div>
-        <div className="image-preview">
+        {/* <div className="image-preview">
             {!backMockup && !loading && (
                 <div className="front-placeholder">Back</div>
             )}
@@ -126,7 +126,7 @@ const DesignGen = () => {
             {loading && (
                 <span>loading...</span>
             )}
-        </div>
+        </div> */}
       </div>
     </div>
     </div>
