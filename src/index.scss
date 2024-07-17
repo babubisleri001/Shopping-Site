@@ -11,3 +11,12 @@ body {
   background-color: #000;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: orange;
+}
+
+::selection {
+  color: white;
+  background: orange;
+}
