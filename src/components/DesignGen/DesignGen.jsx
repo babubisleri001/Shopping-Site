@@ -55,7 +55,6 @@ const DesignGen = () => {
       ]);
 
       if (result && result.data && result.data[0]) {
-        console.log("Generated Image Data:", result.data[0]); // Log image data
         setFrontMockup(result.data[0]);
         setBackMockup(result.data[1]) // Directly use the image data
       } else {
