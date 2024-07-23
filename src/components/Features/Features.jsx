@@ -13,10 +13,10 @@ const Features = () => {
   return (
     <div className='wrapper'>
       <div className="title">
-        <div className="heading">
+        <div className="features-heading">
           What's in store for you.
         </div>
-        <div className="subHeading">
+        <div className="features-subHeading">
           Discover our features
         </div>
       </div>

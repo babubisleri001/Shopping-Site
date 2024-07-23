@@ -73,8 +73,8 @@ const Team = () => {
   return (
     <div className="team-section">
       <div className="header">
-        <img src={logo} alt="Rookus Logo" className="logo" />
-        <h2>About Rookus</h2>
+      <img src={logo} alt="Rookus Logo" className="logo" /><br/>
+        About Us
       </div>
       <div className="about">
         <p>
