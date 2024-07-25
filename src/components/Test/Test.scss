@@ -6,7 +6,6 @@
   position: sticky;
   top: 0;
   height: 100vh;
-
   img{
     height: auto;
     width: 100%;
@@ -21,6 +20,7 @@
 
   .gallery-title {
     position: absolute;
+    writing-mode: sideways-rl;
     left: 50%;
     transform: translateX(-50%);
     color: white;
