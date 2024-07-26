@@ -1,4 +1,8 @@
 import './Test.scss';
+import img1 from '../../assets/Designs/design1.png'
+import img2 from '../../assets/Designs/design2.png'
+import img3 from '../../assets/Designs/design3.png'
+import img4 from '../../assets/Designs/design4.png'
 
 
 import { gsap } from 'gsap';
@@ -26,10 +30,10 @@ const Test = () => {
                 Gallery
             </div>
             <div ref={galleryRef} className="gallery">
-                <GalleryCard src='/assets/Designs/design1.png' />
-                <GalleryCard src='/assets/Designs/design2.png' />
-                <GalleryCard src='/assets/Designs/design3.png' />
-                <GalleryCard src='/assets/Designs/design4.png' />
+                <GalleryCard src={img1} />
+                <GalleryCard src={img2} />
+                <GalleryCard src={img3} />
+                <GalleryCard src={img4} />
             </div>
         </div>
     );
