@@ -27,6 +27,10 @@ const Test = () => {
             </div>
             <div ref={galleryRef} className="gallery">
                 <GalleryCard src='/src/assets/Designs/design1.png' />
+                <GalleryCard src='/src/assets/Designs/design2.png' />
+                <GalleryCard src='/src/assets/Designs/design3.png' />
+                <GalleryCard src='/src/assets/Designs/design4.png' />
+                <GalleryCard src='/src/assets/Designs/design1.png' />
             </div>
         </div>
     );

@@ -1,9 +1,13 @@
 .gallery-card-wrapper {
   display: flex;
   align-items: center;
-  width: 800px;
+  width: 1000px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
   padding:0 5rem;
   margin-top: 10rem;
+
   img{
     height: auto;
     width: 100%;
@@ -13,17 +17,21 @@
 
 .gallery-wrapper {
 
-  margin-top: 7rem;
   max-height: 80vh;
+  color: white;
 
   .gallery-title {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    writing-mode:vertical-lr;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
     color: white;
+    filter: invert(0.2);
+    mix-blend-mode:difference;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 5rem;
-
+    font-size: 10rem;
+    z-index: 10;
   }
 
   .gallery{
@@ -38,6 +46,12 @@
 
 @media (max-width: 768px) {
   .gallery-card-wrapper{
-    max-width: 80vw;
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-card-wrapper{
+    max-width: 500px;
   }
 }
