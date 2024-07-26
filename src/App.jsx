@@ -7,7 +7,7 @@ import Team from './components/Team/Team';
 import Features from './components/Features/Features';
 import title from './assets/Rookus-title-4.png';
 import kafka from './assets/kafka.jpg';
-
+import Gallery from './components/Gallery/Gallery'
 
 import DesignGen from './components/DesignGen/DesignGen';
 import Test from './components/Test/Test'
@@ -34,6 +34,8 @@ const FeaturesPage = () => <Features />;
 const Design = () => <DesignGen />
 
 const Testing = () => <Test/>
+
+const GalleryPg = () => <Gallery/>
 
 
 function App() {
@@ -66,7 +68,10 @@ function App() {
           path: '/design',
           element: <Design />
         },
-
+        {
+          path: '/gallery',
+          element: <GalleryPg/>
+        },
 
         {
           path: '/test-branch',

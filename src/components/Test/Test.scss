@@ -48,6 +48,11 @@
   .gallery-card-wrapper{
     max-width: 750px;
   }
+  .gallery-wrapper {
+    .gallery-title {
+      font-size: 5rem;
+    }
+  }
 }
 
 @media (max-width: 576px) {

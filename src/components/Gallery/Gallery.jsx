@@ -1,4 +1,4 @@
-import './Test.scss';
+import './Gallery.scss';
 import img1 from '../../assets/Designs/design1.png'
 import img2 from '../../assets/Designs/design2.png'
 import img3 from '../../assets/Designs/design3.png'
@@ -14,7 +14,7 @@ const GalleryCard = ({ src }) => {
     );
 };
 
-const Test = () => {
+const Gallery = () => {
     const galleryRef = useRef(null);
     const galleryWrapRef = useRef(null);
     const images = [img1, img2, img3, img4];
@@ -34,4 +34,4 @@ const Test = () => {
     );
 };
 
-export default Test;
+export default Gallery;

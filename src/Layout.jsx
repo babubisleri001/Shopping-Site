@@ -5,7 +5,7 @@ import Chatbot from './components/Chatbot/Chatbot'
 import logo from './assets/rookus-logo.png';
 
 const Layout = () => {
-    const navItems = ['Home', 'Team', 'Contact', 'Features'];
+    const navItems = ['Home', 'Team', 'Contact', 'Features', 'Gallery'];
     return (
         <div style={{
             display:"flex",
