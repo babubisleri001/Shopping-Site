@@ -3,9 +3,10 @@ import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import Chatbot from './components/Chatbot/Chatbot'
 import logo from './assets/rookus-logo.png';
+import Auth from "./components/Auth/Auth";
 
 const Layout = () => {
-    const navItems = ['Home', 'Team', 'Contact', 'Features', 'Gallery'];
+    const navItems = ['Home', 'Team', 'Contact', 'Features', 'Gallery', 'Login'];
     return (
         <div style={{
             display:"flex",
@@ -25,4 +26,6 @@ const Layout = () => {
     )
 }
 
-export default Layout
+export default Layout;
+
+ 

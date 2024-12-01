@@ -8,9 +8,13 @@ import Features from './components/Features/Features';
 import title from './assets/Rookus-title-4.png';
 import kafka from './assets/kafka.jpg';
 import Gallery from './components/Gallery/Gallery'
-
 import DesignGen from './components/DesignGen/DesignGen';
 import Test from './components/Test/Test'
+
+import Auth from './components/Auth/Auth';
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 const teamMembers = [
   {
     image: kafka,
@@ -36,6 +40,8 @@ const Design = () => <DesignGen />
 const Testing = () => <Test/>
 
 const GalleryPg = () => <Gallery/>
+
+const AuthPage = () => <Auth/>
 
 
 function App() {
@@ -76,6 +82,11 @@ function App() {
         {
           path: '/test-branch',
           element: <Testing/>
+        },
+
+        {
+          path: '/Auth',
+          element: <AuthPage/>
         }
       ],
     },
